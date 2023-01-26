@@ -20,6 +20,10 @@ const buildPage = () => {
     const btn = document.createElement('button');
     const odinImg = document.createElement('img');
     const menuImg = document.createElement('img');
+    const ul = document.createElement('ul');
+    const li = document.createElement('li');
+    const navItem = document.createElement('span');
+    const tooltop = document.createElement('span');
 
     odinImg.classList.add('odin-img');
     btn.setAttribute('id', 'btn');
@@ -32,7 +36,17 @@ const buildPage = () => {
     logo.classList.add('logo');
     user.classList.add('user');
 
+    navItem.classList.add('nav-item');
+    tooltop.classList.add('tooltip');
+    navItem.textContent = 'Projects';
+    tooltop.textContent = '+';
+    li.appendChild(navItem);
+    li.appendChild(tooltop);
+    ul.appendChild(li);
+
+
     menuImg.setAttribute('src', myIcon.src);
+    odinImg.setAttribute('src', myOdin.src)
     todo.textContent = 'Todo List';
     rightSide.textContent = 'Right Side'
 
@@ -47,8 +61,10 @@ const buildPage = () => {
     top.appendChild(logo);
     sidebar.appendChild(top)
     sidebar.appendChild(user);
+    sidebar.append(ul);
     body.appendChild(sidebar);
     body.appendChild(mainContent);
+    
 
 
 }
