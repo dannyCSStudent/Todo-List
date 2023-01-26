@@ -82,8 +82,12 @@
     margin: 0.8rem auto;
     line-height: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+.add-btn {
+    height: 2rem;
+    width: 2rem;
 }
 
 .sidebar ul li input {
